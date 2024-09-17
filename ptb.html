@@ -89,7 +89,14 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><i><strong>Some details of the code</strong>…</i></p>
-<p>I've included an auto reset feature in the code for when the WIFI goes out; it should allow at least 5 minutes before the system is rebooted in the event the WIFI is lost. I found out during development that the board will not attempt to reconnect once the connection goes out so I needed a way for the board to automatically detect this condition and initiate a reboot… You'll see from the schematic that there's a wire going from one of the pins directly to the RESET pin of the Arduino Nano.&nbsp;</p>
+<p>I've included an auto reset feature in the code for when the WIFI goes out; it should allow at least 5 minutes before the system is rebooted in the event the WIFI is lost. I found out during development that the board will not attempt to reconnect once the connection goes out so I needed a way for the board to automatically detect this condition and initiate a reboot… You'll see from the layout that there's a wire going from one of the pins directly to the RESET pin of the Arduino Nano.&nbsp;</p>
+<p>&nbsp;</p>
+<figure class="image image-style-block-align-left" data-ckbox-resource-id="8Iq_kfUXebhh">
+    <picture>
+        <source srcset="https://ckbox.cloud/6b9cf415f09190562370/assets/8Iq_kfUXebhh/images/80.webp 80w,https://ckbox.cloud/6b9cf415f09190562370/assets/8Iq_kfUXebhh/images/160.webp 160w,https://ckbox.cloud/6b9cf415f09190562370/assets/8Iq_kfUXebhh/images/240.webp 240w,https://ckbox.cloud/6b9cf415f09190562370/assets/8Iq_kfUXebhh/images/320.webp 320w,https://ckbox.cloud/6b9cf415f09190562370/assets/8Iq_kfUXebhh/images/392.webp 392w" sizes="(max-width: 392px) 100vw, 392px" type="image/webp"><img src="https://ckbox.cloud/6b9cf415f09190562370/assets/8Iq_kfUXebhh/images/392.png" width="392" height="468">
+    </picture>
+    <figcaption>The Servo Arm is not shown, nor is the charge button…</figcaption>
+</figure>
 <p>&nbsp;</p>
 <p>In addition, the Arduino Nano would reboot numerous times a day when it was placed into the driver-side footwell... I didn't have too much time to debug this issue as I was in a time crunch to get back to Nevada, so I instrumented the usage of NTP and some flash memory to store the last time the charge button was pressed and the uptime of the system to determine if it was time to ‘press-the-button’, even if a spurious reset had occurred.</p>
 <p>&nbsp;</p>
